@@ -1,0 +1,168 @@
+.isizer-preview-box {
+	box-sizing: border-box;
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.isizer-size-preview {
+	position: relative;
+	box-sizing: border-box;
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
+    margin: 10px 10px;
+    border: 1px solid #dedede;
+    height: 120px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fafafa;
+}
+
+.isizer-size-preview:first-child {
+	margin-left: 0;
+}
+.isizer-size-preview:last-child {
+	margin-right: 0;
+}
+
+.isizer-size-preview .isizer-remove {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.isizer-size-preview span {
+	box-sizing: border-box;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #a9a6a6;
+}
+
+.isizer-add {
+	cursor: pointer;
+}
+
+.isizer-add a{
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #a9a6a6;
+}
+
+.isizer-modal-content {
+	margin: 20px 0;
+}
+
+.isizer-modal-content input[type='text'] {
+	width: 100%;
+	height: 45px;
+	text-indent: 8px;
+}
+
+.isizer-input-wrap {
+	margin-bottom: 20px;
+}
+
+.isizer-modal-content .isizer-input-group {
+	display: flex;
+	margin-bottom: 15px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.isizer-modal-content .isizer-input-group input{
+	width: 48%;
+}
+
+.isizer-modal-content button {
+	width: 48%;
+	height: 45px;
+	background-color: cornflowerblue;
+	border: 0;
+	outline: 0;
+	color: #fff;
+	border-raduis: 0;
+}
+
+.isizer-size-preview.removed {
+	opacity: 0.4;
+}
+
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 110px;
+	height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ca2222;
+	-webkit-transition: .4s;
+	transition: .4s;
+	border-radius: 34px;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+	border-radius: 50%;
+}
+
+input:checked + .slider {
+	background-color: #2ab934;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(75px);
+}
+
+
+.slider:after
+{
+	content:'No crop';
+	color: white;
+	display: block;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	font-size: 10px;
+	font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider:after
+{
+	content:'Crop on';
+}
+
